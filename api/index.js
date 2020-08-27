@@ -1,14 +1,21 @@
 import express from 'express'
 import bodyParser from 'body-parser'
+import productRoutes from './server/routes/ProductRoutes';
 
 const app = express()
 app.use(bodyParser.json())
-app.use(bodyParser.urlencoded({ extended: false}))
+app.use(bodyParser.urlencoded({ extended: false }))
 
 const port = process.env.PORT || 3000
 
-app.get('*', (req, res) => res.status(200).send('<html><h1>Hello World! Welcome to Dev girl life!</h1></html>'))
+app.use('/products', productRoutes);
+
+app.get('*', (req, res) => res.status(200).send({
+   message: 'Só trabalho sem diversão faz de jack um bobão'
+}))
 
 app.listen(port, () => {
-    console.log(`Server is running on PORT ${port}`)
+   console.log(`Server is running on PORT ${port}`)
 })
+
+export default app
