@@ -4,6 +4,7 @@ import ProductRoutes from '../api/server/routes/ProductRoutes';
 import OrderRoutes from '../api/server/routes/OrderRoutes';
 
 const app = express()
+
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
 
@@ -13,7 +14,7 @@ app.use('/products', ProductRoutes);
 app.use('/orders', OrderRoutes);
 
 app.get('*', (req, res) => res.status(200).send({
-   message: 'Só trabalho sem diversão faz de jack um bobão'
+   message: 'Bem vindos a API do Burger Queen!'
 }))
 
 app.listen(port, () => {

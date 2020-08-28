@@ -4,9 +4,7 @@ module.exports = (sequelize, DataTypes) => {
     "Product",
     {
       name: DataTypes.STRING,
-      price: DataTypes.DECIMAL(10, 2),
-      has_extra: DataTypes.BOOLEAN,
-      is_burger: DataTypes.BOOLEAN,
+      price: DataTypes.DECIMAL(10, 2)
     },
     {}
   );

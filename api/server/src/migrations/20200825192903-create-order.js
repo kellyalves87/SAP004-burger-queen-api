@@ -7,12 +7,19 @@ module.exports = {
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER,
+        references: { model: "Orders", key: "id" },
+      },
+      active: {
+        type: Sequelize.BOOLEAN,
+      },
+      table: {
+        type: Sequelize.INTEGER,
       },
       client: {
         type: Sequelize.STRING,
       },
-      table: {
-        type: Sequelize.INTEGER,
+      waiter: {
+        type: Sequelize.STRING,
       },
       createdAt: {
         allowNull: false,
