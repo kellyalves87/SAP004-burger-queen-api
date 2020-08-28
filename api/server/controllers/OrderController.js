@@ -1,6 +1,7 @@
 import Util from './util'
 import OrderService from '../services/OrderService'
 import Products_x_OrderService from '../services/ProductsXOrderService'
+
 const util = new Util()
 
 class OrderController {
@@ -47,4 +48,4 @@ class OrderController {
   }
 
 }
-export default OrderController
+export default OrderController;
